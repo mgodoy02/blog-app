@@ -33,4 +33,29 @@ export class Blog {
     fecha: ''
   };
 
+  publicarNoticia() {
+  // Validamos que ningún campo esté vacío (Tema 7.2 - lógica del evento)
+  if (
+    !this.nuevaNoticia.titulo.trim() ||
+    !this.nuevaNoticia.imagen.trim() ||
+    !this.nuevaNoticia.texto.trim() ||
+    !this.nuevaNoticia.fecha.trim()
+  ) {
+    alert('Todos los campos son obligatorios. Por favor, rellena la noticia completa.');
+    return;
+  }
+
+  // Si todo está correcto, insertamos la noticia en el array (Tema 2 - Arrays)
+  this.noticias.push({ ...this.nuevaNoticia });
+
+  // Reseteamos el formulario para la siguiente publicación
+  this.nuevaNoticia = {
+    titulo: '',
+    imagen: '',
+    texto: '',
+    fecha: ''
+  };
 }
+
+}
+
