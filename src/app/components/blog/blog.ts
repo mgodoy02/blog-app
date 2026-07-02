@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { Noticia } from '../../interfaces/noticia';
 
 @Component({
   selector: 'app-blog',
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './blog.html',
   styleUrl: './blog.css'
 })
@@ -23,5 +24,13 @@ export class Blog {
       fecha: '2025-01-20'
     }
   ];
+
+  // Objeto que representará la noticia que el usuario está rellenando en el formulario
+  nuevaNoticia: Noticia = {
+    titulo: '',
+    imagen: '',
+    texto: '',
+    fecha: ''
+  };
 
 }

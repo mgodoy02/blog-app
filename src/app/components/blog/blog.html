@@ -16,3 +16,29 @@
   </div>
 
 </section>
+
+<section class="form-noticia">
+  <h2>Publicar nueva noticia</h2>
+
+  <div class="campo">
+    <label for="titulo">Título:</label>
+    <input type="text" id="titulo" [(ngModel)]="nuevaNoticia.titulo" placeholder="Introduce el título">
+  </div>
+
+  <div class="campo">
+    <label for="imagen">Imagen (URL):</label>
+    <input type="text" id="imagen" [(ngModel)]="nuevaNoticia.imagen" placeholder="https://...">
+  </div>
+
+  <div class="campo">
+    <label for="texto">Texto:</label>
+    <textarea id="texto" [(ngModel)]="nuevaNoticia.texto" placeholder="Escribe el contenido de la noticia"></textarea>
+  </div>
+
+  <div class="campo">
+    <label for="fecha">Fecha:</label>
+    <input type="date" id="fecha" [(ngModel)]="nuevaNoticia.fecha">
+  </div>
+
+  <button type="button">Publicar</button>
+</section>
