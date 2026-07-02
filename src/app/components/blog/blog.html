@@ -1,1 +1,18 @@
-<p>blog works!</p>
+<section class="blog-container">
+
+  <h1>Blog de Noticias</h1>
+
+  <div class="listado-noticias">
+    @for (noticia of noticias; track noticia.titulo) {
+      <article class="noticia">
+        <img [src]="noticia.imagen" [alt]="noticia.titulo">
+        <h2>{{ noticia.titulo }}</h2>
+        <p class="fecha">{{ noticia.fecha }}</p>
+        <p class="texto">{{ noticia.texto }}</p>
+      </article>
+    } @empty {
+      <p>No hay noticias publicadas todavía.</p>
+    }
+  </div>
+
+</section>

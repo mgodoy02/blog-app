@@ -1,0 +1,30 @@
+.blog-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: sans-serif;
+}
+
+.listado-noticias {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.noticia {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 15px;
+}
+
+.noticia img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.fecha {
+  color: #777;
+  font-size: 0.85em;
+}
